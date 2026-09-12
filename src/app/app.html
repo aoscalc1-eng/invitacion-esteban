@@ -1,0 +1,74 @@
+<div class="pagina">
+
+  <div class="decoracion corazon c1">♥</div>
+  <div class="decoracion corazon c2">♥</div>
+  <div class="decoracion estrella e1">★</div>
+  <div class="decoracion estrella e2">★</div>
+
+  <section class="portada" *ngIf="!invitacionAbierta">
+    <div class="tarjeta">
+      <div class="elefante">🐘</div>
+      <p class="intro">Tienes una invitación especial</p>
+      <h1>Baby Shower</h1>
+      <p class="de">de</p>
+      <h2>ESTEBAN</h2>
+      <p class="mensaje-corto">Una tarde para celebrar con mucho amor 💙</p>
+
+      <button (click)="abrirInvitacion()">
+        💌 Abrir invitación
+      </button>
+    </div>
+  </section>
+
+  <section class="contenido" *ngIf="invitacionAbierta">
+    <div class="tarjeta invitacion">
+      <div class="mini">♥ ★ ♥</div>
+
+      <p class="titulo-pequeno">Te invitamos al</p>
+      <h1>Baby Shower</h1>
+      <p class="de">de</p>
+      <h2>ESTEBAN</h2>
+
+      <div class="elefante grande">🐘</div>
+
+      <p class="mensaje">
+        Acompáñanos a celebrar la dulce espera de Esteban.
+        Será una tarde muy especial y nos encantará compartirla contigo.
+      </p>
+
+      <div class="datos">
+        <div class="dato">
+          <div class="icono">📅</div>
+          <div>
+            <span>Día</span>
+            <strong>20 de septiembre</strong>
+          </div>
+        </div>
+
+        <div class="dato">
+          <div class="icono">🕒</div>
+          <div>
+            <span>Hora</span>
+            <strong>3 de la tarde</strong>
+          </div>
+        </div>
+
+        <div class="dato">
+          <div class="icono">📍</div>
+          <div>
+            <span>Lugar</span>
+            <strong>Escuela de San Luis Letrán</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="acciones">
+        <button (click)="abrirUbicacion()">📍 Ver ubicación</button>
+        <button class="secundario" (click)="volver()">← Volver</button>
+      </div>
+
+      <p class="final">💙 Te esperamos 💙</p>
+    </div>
+  </section>
+
+</div>
