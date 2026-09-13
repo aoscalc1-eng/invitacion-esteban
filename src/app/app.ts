@@ -19,10 +19,12 @@ export class App {
     this.invitacionAbierta = false;
   }
 
-  abrirUbicacion(): void {
+   abrirUbicacion(): void {
     window.open(
-      'https://www.google.com/maps/search/?api=1&query=Escuela+de+San+Luis+Letran+Guatemala',
+      'https://www.google.com/maps/search/?api=1&query=Instituto+de+Diversificado+por+Cooperativa+San+Luis+Guatemala',
       '_blank'
     );
   }
+
+  
 }
