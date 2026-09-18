@@ -1,74 +1,362 @@
-<div class="pagina">
+<div class="universo">
 
-  <div class="decoracion corazon c1">♥</div>
-  <div class="decoracion corazon c2">♥</div>
-  <div class="decoracion estrella e1">★</div>
-  <div class="decoracion estrella e2">★</div>
+  <!-- FONDO ANIMADO -->
+  <div class="cielo">
 
-  <section class="portada" *ngIf="!invitacionAbierta">
-    <div class="tarjeta">
-      <div class="elefante">🐘</div>
-      <p class="intro">Tienes una invitación especial</p>
-      <h1>Baby Shower</h1>
-      <p class="de">de</p>
-      <h2>ESTEBAN</h2>
-      <p class="mensaje-corto">Una tarde para celebrar con mucho amor 💙</p>
+    <div class="nube nube1">☁</div>
+    <div class="nube nube2">☁</div>
+    <div class="nube nube3">☁</div>
+    <div class="nube nube4">☁</div>
 
-      <button (click)="abrirInvitacion()">
-        💌 Abrir invitación
-      </button>
-    </div>
-  </section>
+    <div class="estrella estrella1">★</div>
+    <div class="estrella estrella2">✦</div>
+    <div class="estrella estrella3">★</div>
+    <div class="estrella estrella4">✦</div>
+    <div class="estrella estrella5">★</div>
 
-  <section class="contenido" *ngIf="invitacionAbierta">
-    <div class="tarjeta invitacion">
-      <div class="mini">♥ ★ ♥</div>
+    <div class="burbuja b1"></div>
+    <div class="burbuja b2"></div>
+    <div class="burbuja b3"></div>
+    <div class="burbuja b4"></div>
+    <div class="burbuja b5"></div>
+    <div class="burbuja b6"></div>
 
-      <p class="titulo-pequeno">Te invitamos al</p>
-      <h1>Baby Shower</h1>
-      <p class="de">de</p>
-      <h2>ESTEBAN</h2>
+    <div class="corazon corazon1">♥</div>
+    <div class="corazon corazon2">♥</div>
+    <div class="corazon corazon3">♥</div>
 
-      <div class="elefante grande">🐘</div>
+  </div>
 
-      <p class="mensaje">
-        Acompáñanos a celebrar la dulce espera de Esteban.
-        Será una tarde muy especial y nos encantará compartirla contigo.
+
+  <!-- ========================= -->
+  <!-- PORTADA -->
+  <!-- ========================= -->
+
+  <main
+    class="pantalla portada"
+    *ngIf="!invitacionAbierta">
+
+    <div class="tarjeta-principal">
+
+      <div class="insignia">
+        ✦ UNA INVITACIÓN ESPECIAL ✦
+      </div>
+
+      <div class="elefante-container">
+
+        <div class="halo"></div>
+
+        <div class="elefante">
+          🐘
+        </div>
+
+        <div class="estrellitas">
+          ✦　★　✦
+        </div>
+
+      </div>
+
+      <p class="preTitulo">
+        Celebremos juntos la llegada de
       </p>
 
-      <div class="datos">
-        <div class="dato">
-          <div class="icono">📅</div>
+      <h1>
+        Baby Shower
+      </h1>
+
+      <span class="de">
+        de
+      </span>
+
+      <h2>
+        ESTEBAN
+      </h2>
+
+      <div class="separador">
+        <span></span>
+        💙
+        <span></span>
+      </div>
+
+      <p class="frase-portada">
+        Un pequeño milagro está en camino
+        y queremos compartir contigo
+        la alegría de esperarlo.
+      </p>
+
+      <button
+        class="boton-abrir"
+        (click)="abrirInvitacion()">
+
+        <span class="sobre">💌</span>
+
+        <span>
+          Abrir invitación
+        </span>
+
+        <span class="flecha">
+          →
+        </span>
+
+      </button>
+
+      <p class="toca">
+        Toca para descubrir todos los detalles
+      </p>
+
+    </div>
+
+  </main>
+
+
+  <!-- ========================= -->
+  <!-- INVITACIÓN ABIERTA -->
+  <!-- ========================= -->
+
+  <main
+    class="pantalla contenido"
+    *ngIf="invitacionAbierta">
+
+    <div class="tarjeta-invitacion">
+
+      <div class="cabecera">
+
+        <span class="mini-estrellas">
+          ✦ ★ ✦
+        </span>
+
+        <p>
+          Con mucha alegría
+        </p>
+
+        <h1>
+          Baby Shower
+        </h1>
+
+        <span class="de">
+          de
+        </span>
+
+        <h2>
+          ESTEBAN
+        </h2>
+
+        <div class="elefante-pequeno">
+          🐘
+        </div>
+
+      </div>
+
+
+      <!-- MENSAJE -->
+
+      <section class="mensaje">
+
+        <p>
+          Acompáñanos a celebrar la dulce espera de
+          <strong>Esteban</strong>.
+        </p>
+
+        <p>
+          Será una tarde llena de alegría, cariño
+          y momentos especiales. 💙
+        </p>
+
+      </section>
+
+
+      <!-- DATOS DEL EVENTO -->
+
+      <section class="datos-evento">
+
+        <article class="dato-card">
+
+          <div class="dato-icono">
+            📅
+          </div>
+
           <div>
-            <span>Día</span>
+            <span>DÍA</span>
             <strong>20 de septiembre</strong>
           </div>
-        </div>
 
-        <div class="dato">
-          <div class="icono">🕒</div>
-          <div>
-            <span>Hora</span>
-            <strong>3 de la tarde</strong>
+        </article>
+
+
+        <article class="dato-card">
+
+          <div class="dato-icono">
+            🕒
           </div>
-        </div>
 
-        <div class="dato">
-          <div class="icono">📍</div>
           <div>
-            <span>Lugar</span>
-            <strong>Escuela de San Luis Letrán</strong>
+            <span>HORA</span>
+            <strong>3:00 de la tarde</strong>
           </div>
+
+        </article>
+
+
+        <article class="dato-card">
+
+          <div class="dato-icono">
+            📍
+          </div>
+
+          <div>
+            <span>LUGAR</span>
+
+            <strong>
+              Instituto de Diversificado
+              por Cooperativa San Luis
+            </strong>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <!-- CUENTA REGRESIVA -->
+
+      <section class="contador">
+
+        <p class="contador-titulo">
+          ✦ FALTAN ✦
+        </p>
+
+        <div class="contador-grid">
+
+          <div class="tiempo">
+            <strong>{{ dias }}</strong>
+            <span>Días</span>
+          </div>
+
+          <div class="tiempo">
+            <strong>{{ horas }}</strong>
+            <span>Horas</span>
+          </div>
+
+          <div class="tiempo">
+            <strong>{{ minutos }}</strong>
+            <span>Min</span>
+          </div>
+
+          <div class="tiempo">
+            <strong>{{ segundos }}</strong>
+            <span>Seg</span>
+          </div>
+
         </div>
-      </div>
 
-      <div class="acciones">
-        <button (click)="abrirUbicacion()">📍 Ver ubicación</button>
-        <button class="secundario" (click)="volver()">← Volver</button>
-      </div>
+        <p class="contador-final">
+          para celebrar juntos 💙
+        </p>
 
-      <p class="final">💙 Te esperamos 💙</p>
+      </section>
+
+
+      <!-- BOTONES -->
+
+      <section class="acciones">
+
+        <button
+          class="accion ubicacion"
+          (click)="abrirUbicacion()">
+
+          <span class="accion-icono">
+            📍
+          </span>
+
+          <span>
+            <strong>Ver ubicación</strong>
+            <small>Abrir en Google Maps</small>
+          </span>
+
+          <span class="accion-flecha">
+            ›
+          </span>
+
+        </button>
+
+
+        <button
+          class="accion calendario"
+          (click)="agregarCalendario()">
+
+          <span class="accion-icono">
+            📅
+          </span>
+
+          <span>
+            <strong>Guardar la fecha</strong>
+            <small>Agregar al calendario</small>
+          </span>
+
+          <span class="accion-flecha">
+            ›
+          </span>
+
+        </button>
+
+
+        <button
+          class="accion compartir"
+          (click)="compartir()">
+
+          <span class="accion-icono">
+            💌
+          </span>
+
+          <span>
+            <strong>Compartir invitación</strong>
+            <small>Enviar a alguien especial</small>
+          </span>
+
+          <span class="accion-flecha">
+            ›
+          </span>
+
+        </button>
+
+      </section>
+
+
+      <!-- FINAL -->
+
+      <section class="despedida">
+
+        <div class="luna">
+          ☾
+        </div>
+
+        <h3>
+          Te esperamos
+        </h3>
+
+        <p>
+          Tu compañía hará aún más especial
+          este hermoso momento.
+        </p>
+
+        <div class="firma">
+          💙 Baby Shower de Esteban 💙
+        </div>
+
+      </section>
+
+
+      <button
+        class="volver"
+        (click)="volver()">
+
+        ← Volver a la portada
+
+      </button>
+
     </div>
-  </section>
+
+  </main>
 
 </div>
